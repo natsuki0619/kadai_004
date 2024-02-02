@@ -1,0 +1,33 @@
+PS C:\Git Hub\20240202_kadai> git init git_challenge
+Initialized empty Git repository in C:/Git Hub/20240202_kadai/git_challenge/.git/
+PS C:\Git Hub\20240202_kadai> cd "git_challenge"
+PS C:\Git Hub\20240202_kadai\git_challenge> echo "Hello, world!"
+Hello, world!
+PS C:\Git Hub\20240202_kadai\git_challenge> echo "Hello, world!" > hello_world.txt
+PS C:\Git Hub\20240202_kadai\git_challenge> git add hello_world.txt
+>> git commit -m "Hello_world.txtを追加"
+[main (root-commit) 5fcf43b] Hello_world.txtを追加
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+PS C:\Git Hub\20240202_kadai\git_challenge> echo "こんにちは、世界！" >>hello_world.txt
+PS C:\Git Hub\20240202_kadai\git_challenge> git add hello_world.txt
+>> >> git commit -m "日本語訳を追記"       
+>> : 用語 '>>' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名
+前として認識されません。名前が正しく記述されていることを確認し、パスが含まれている場合はその  
+パスが正しいことを確認してから、再試行してください。
+発生場所 行:2 文字:1
++ >> git commit -m "日本語訳を追記"
++ ~~
+    + CategoryInfo          : ObjectNotFound: (>>:String) [], CommandNotFoundException        
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Git Hub\20240202_kadai\git_challenge> echo "こんにちは、世界！" >> hello_world.txt  
+PS C:\Git Hub\20240202_kadai\git_challenge> git add hello_world.txt
+>> git commit -m "日本語訳を追記"
+[main 2ca54ea] 日本語訳を追記
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Git Hub\20240202_kadai\git_challenge> git log --oneline
+>>
+2ca54ea (HEAD -> main) 日本語訳を追記
+5fcf43b Hello_world.txtを追加
+PS C:\Git Hub\20240202_kadai\git_challenge> 
